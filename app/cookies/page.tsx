@@ -179,7 +179,7 @@ export default function CookiesPage() {
                   If you have any questions about our use of cookies, please contact us at:
                 </p>
                 <p className="mt-2">
-                  Email: privacy@voyago.com<br />
+                  Email: privacy@TourGuide.com<br />
                   Address: 123 Travel Street, San Francisco, CA 94102, United States
                 </p>
               </CardContent>

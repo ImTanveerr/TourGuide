@@ -43,7 +43,7 @@ type RoleKey = NonNullable<UserRole> | "GUEST";
 
 const baseConfig: SidebarConfig = {
   user: {
-    name: "Voyago User",
+    name: "TourGuide User",
     email: "user@example.com",
     avatar: "/avatars/default.jpg",
   },

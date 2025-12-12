@@ -28,14 +28,14 @@ export function Logo({ className, showText = false, size = "md" }: LogoProps) {
       )}
     >
       <Image
-        src="/voyago-icon.png"
-        alt="Voyago"
+        src="/tourguide.png"
+        alt="TourGuide"
         width={iconSize}
         height={iconSize}
         className="object-contain"
         priority
       />
-      {showText && <span className={`${textSize} mt-1 ml-2`}>Voyago</span>}
+      {showText && <span className={`${textSize} mt-1 ml-2`}>TourGuide</span>}
     </Link>
   );
 }

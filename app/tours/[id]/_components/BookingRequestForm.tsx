@@ -138,8 +138,27 @@ export function BookingRequestForm({ listing }: BookingRequestFormProps) {
                   <FormControl>
                     <Input
                       type="datetime-local"
+                      // Set min date to today
                       min={new Date().toISOString().slice(0, 16)}
-                      {...field}
+
+                      // Connect Ref and Blur for validation
+                      name={field.name}
+                      onBlur={field.onBlur}
+                      ref={field.ref}
+
+                      // FIX 1: Convert Form State (ISO String) -> Input Format (No seconds)
+                      value={
+                        field.value
+                          ? new Date(field.value).toISOString().slice(0, 16)
+                          : ""
+                      }
+
+                      // FIX 2: Convert Input Format -> Form State (ISO String with seconds)
+                      onChange={(e) => {
+                        const dateString = e.target.value;
+                        // Zod .datetime() requires full ISO string (with seconds and Z)
+                        field.onChange(dateString ? new Date(dateString).toISOString() : "");
+                      }}
                     />
                   </FormControl>
                   <FormMessage />

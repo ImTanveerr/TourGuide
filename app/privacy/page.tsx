@@ -17,7 +17,7 @@ export default function PrivacyPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Voyago ("we," "our," or "us") is committed to protecting your privacy. This
+                  TourGuide ("we," "our," or "us") is committed to protecting your privacy. This
                   Privacy Policy explains how we collect, use, disclose, and safeguard your
                   information when you use our platform and services.
                 </p>
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 <p className="mt-2">
-                  Email: privacy@voyago.com<br />
+                  Email: privacy@TourGuide.com<br />
                   Address: 123 Travel Street, San Francisco, CA 94102, United States
                 </p>
               </CardContent>

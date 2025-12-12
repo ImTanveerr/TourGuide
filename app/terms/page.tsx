@@ -17,7 +17,7 @@ export default function TermsPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  By accessing and using Voyago ("the Platform"), you accept and agree to be
+                  By accessing and using TourGuide ("the Platform"), you accept and agree to be
                   bound by the terms and provision of this agreement. If you do not agree to
                   these Terms of Service, please do not use our platform.
                 </p>
@@ -30,7 +30,7 @@ export default function TermsPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Voyago is a platform that connects travelers with local guides for tours and
+                  TourGuide is a platform that connects travelers with local guides for tours and
                   experiences. We provide a marketplace where guides can list their services
                   and travelers can discover and book tours.
                 </p>
@@ -117,7 +117,7 @@ export default function TermsPage() {
               <CardContent>
                 <p>
                   All payments are processed through our secure payment system. Refund
-                  policies are outlined in our booking terms. Voyago reserves the right to
+                  policies are outlined in our booking terms. TourGuide reserves the right to
                   charge service fees for transactions.
                 </p>
               </CardContent>
@@ -130,7 +130,7 @@ export default function TermsPage() {
               <CardContent>
                 <p>
                   Cancellation policies vary by tour and guide. Please review the specific
-                  cancellation terms before booking. Voyago may charge cancellation fees as
+                  cancellation terms before booking. TourGuide may charge cancellation fees as
                   outlined in our policies.
                 </p>
               </CardContent>
@@ -143,7 +143,7 @@ export default function TermsPage() {
               <CardContent>
                 <p>
                   All content on the platform, including text, graphics, logos, and software,
-                  is the property of Voyago or its content suppliers and is protected by
+                  is the property of TourGuide or its content suppliers and is protected by
                   copyright and other intellectual property laws.
                 </p>
               </CardContent>
@@ -155,7 +155,7 @@ export default function TermsPage() {
               </CardHeader>
               <CardContent>
                 <p>
-                  Voyago acts as a marketplace and is not responsible for the conduct of users,
+                  TourGuide acts as a marketplace and is not responsible for the conduct of users,
                   guides, or travelers. We do not guarantee the quality, safety, or legality
                   of tours listed on our platform.
                 </p>
@@ -197,7 +197,7 @@ export default function TermsPage() {
                   at:
                 </p>
                 <p className="mt-2">
-                  Email: legal@voyago.com<br />
+                  Email: legal@TourGuide.com<br />
                   Address: 123 Travel Street, San Francisco, CA 94102, United States
                 </p>
               </CardContent>

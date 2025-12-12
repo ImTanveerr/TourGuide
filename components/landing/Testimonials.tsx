@@ -7,7 +7,7 @@ const testimonials = [
     name: "Sarah Johnson",
     location: "New York, USA",
     rating: 5,
-    text: "Voyago made my trip to Barcelona unforgettable! My guide showed me places I never would have found on my own.",
+    text: "TourGuide made my trip to Barcelona unforgettable! My guide showed me places I never would have found on my own.",
     avatar: null,
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     name: "Emma Wilson",
     location: "London, UK",
     rating: 5,
-    text: "I've used Voyago in three different cities now, and every experience has been fantastic. Highly recommend!",
+    text: "I've used TourGuide in three different cities now, and every experience has been fantastic. Highly recommend!",
     avatar: null,
   },
 ];

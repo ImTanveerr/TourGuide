@@ -29,8 +29,8 @@ const normalizedApiUrl = rawApiUrl.endsWith("/api/v1")
 
 export const clientEnv = {
   /**
-   * Base URL for the Voyago API (includes /api/v1).
-   * Example: "http://localhost:5000/api/v1" or "https://api.voyago.com/api/v1"
+   * Base URL for the TourGuide API (includes /api/v1).
+   * Example: "http://localhost:5000/api/v1" or "https://api.TourGuide.com/api/v1"
    */
   apiUrl: normalizedApiUrl,
 } as const;

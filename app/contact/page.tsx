@@ -56,7 +56,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-sm text-muted-foreground">support@voyago.com</p>
+                      <p className="text-sm text-muted-foreground">support@TourGuide.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

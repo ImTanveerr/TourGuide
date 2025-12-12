@@ -1,105 +1,116 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { Compass, Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="border-t bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Brand Column */}
-          <div className="space-y-4">
-            <Logo showText size="md" />
-            <p className="text-sm text-muted-foreground">
-              Explore like a local, anywhere. Connect with verified guides and discover authentic experiences.
+    <footer className="bg-card border-t border-border pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        
+        {/* --- Top Section: Grid Layout --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+          
+          {/* Column 1: Brand & Description */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="flex items-center gap-2 mb-4 group">
+              <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                <Compass className="w-6 h-6 text-primary" strokeWidth={2.5} />
+              </div>
+              <span className="text-2xl font-bold text-foreground tracking-tight">
+                TourGuide
+              </span>
+            </Link>
+            <p className="text-muted-foreground leading-relaxed mb-6 max-w-sm">
+              Connecting curious travelers with passionate local experts. Experience the world authentically, one story at a time.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/explore" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Explore Destinations
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* For Guides */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold">For Guides</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/register?role=GUIDE" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Become a Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/guide/resources" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Guide Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/guide/support" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Support
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Cookie Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 border-t pt-8">
-          <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
-            <p>© {new Date().getFullYear()} Voyago. All rights reserved.</p>
-            <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-foreground transition-colors">
-                Privacy
-              </Link>
-              <Link href="/terms" className="hover:text-foreground transition-colors">
-                Terms
-              </Link>
-              <Link href="/contact" className="hover:text-foreground transition-colors">
-                Contact
-              </Link>
+            
+            {/* Newsletter Input */}
+            <div className="flex flex-col sm:flex-row gap-2 max-w-sm">
+              <div className="relative flex-grow">
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-secondary/50 border border-border focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
+                />
+              </div>
+              <button className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
+
+          {/* Column 2: Company */}
+          <div>
+            <h4 className="font-bold text-foreground text-lg mb-6">Company</h4>
+            <ul className="space-y-3">
+              {['About Us', 'Careers', 'Blog', 'Press'].map((item) => (
+                <li key={item}>
+                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Support */}
+          <div>
+            <h4 className="font-bold text-foreground text-lg mb-6">Support</h4>
+            <ul className="space-y-3">
+              {['Help Center', 'Safety Information', 'Cancellation Options', 'Report a Concern'].map((item) => (
+                <li key={item}>
+                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Legal */}
+          <div>
+            <h4 className="font-bold text-foreground text-lg mb-6">Legal</h4>
+            <ul className="space-y-3">
+              {['Terms of Service', 'Privacy Policy', 'Cookie Policy', 'Accessibility'].map((item) => (
+                <li key={item}>
+                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
+
+        {/* --- Divider --- */}
+        <div className="border-t border-border my-8"></div>
+
+        {/* --- Bottom Section: Copyright & Socials --- */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground text-sm font-medium">
+            © {currentYear} TourGuide Inc. All rights reserved.
+          </p>
+
+          <div className="flex items-center gap-4">
+            {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
+              <a 
+                key={idx} 
+                href="#" 
+                className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+            ))}
+          </div>
+        </div>
+
       </div>
     </footer>
   );
 }
-

@@ -31,7 +31,7 @@ export function HowItWorks() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">How It Works</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Getting started with Voyago is simple. Follow these easy steps to begin your adventure.
+            Getting started with TourGuide is simple. Follow these easy steps to begin your adventure.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

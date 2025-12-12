@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Voyago",
+  title: "TourGuide",
   description: "Explore like a local, anywhere.",
 };
 

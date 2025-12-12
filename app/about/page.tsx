@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">About Voyago</h1>
+            <h1 className="text-4xl font-bold mb-4">About TourGuide</h1>
             <p className="text-xl text-muted-foreground">
               Connecting travelers with local guides for authentic experiences
             </p>
@@ -15,7 +15,7 @@ export default function AboutPage() {
 
           <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
             <p className="text-lg leading-relaxed mb-6">
-              Voyago is a platform that brings together travelers and local guides to create
+              TourGuide is a platform that brings together travelers and local guides to create
               unforgettable experiences. We believe that the best way to explore a destination
               is through the eyes of someone who calls it home.
             </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
               <CardTitle>Join Us</CardTitle>
               <CardDescription>
                 Whether you're a traveler looking for unique experiences or a local guide
-                ready to share your knowledge, Voyago is the platform for you.
+                ready to share your knowledge, TourGuide is the platform for you.
               </CardDescription>
             </CardHeader>
             <CardContent>

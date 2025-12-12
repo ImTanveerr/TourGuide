@@ -1,21 +1,31 @@
-import { Hero } from "@/components/common/Hero";
 import { HowItWorks } from "@/components/landing/HowItWorks";
-import { PopularDestinations } from "@/components/landing/PopularDestinations";
-import { TopGuides } from "@/components/landing/TopGuides";
-import { Categories } from "@/components/landing/Categories";
+
 import { Testimonials } from "@/components/landing/Testimonials";
-import { CTASection } from "@/components/landing/CTASection";
+import { CallToAction } from "@/components/landing/CTASection";
+import { HeroSection } from "@/components/common/HeroSection";
+
+import { TrendingDestinations } from "@/components/landing/trending-destinations";
+import { TopGuides } from "@/components/landing/top-guides";
+import { WhyChooseUs } from "@/components/landing/why-choose-us";
+import { Categories } from "@/components/common/categories";
+
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <HeroSection />
+      < Categories />
+
+      <TrendingDestinations />
+      <TopGuides/>
+
       <HowItWorks />
-      <PopularDestinations />
-      <TopGuides />
-      <Categories />
+
       <Testimonials />
-      <CTASection />
+      <WhyChooseUs/>
+      <CallToAction/>
+      
     </>
   );
 }

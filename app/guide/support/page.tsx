@@ -45,7 +45,7 @@ export default function GuideSupportPage() {
     {
       question: "What if a traveler cancels?",
       answer:
-        "Cancellation policies vary by tour. You can set your own cancellation terms when creating a listing. Voyago will handle cancellations according to your specified policy.",
+        "Cancellation policies vary by tour. You can set your own cancellation terms when creating a listing. TourGuide will handle cancellations according to your specified policy.",
     },
     {
       question: "How do I handle disputes?",
@@ -66,7 +66,7 @@ export default function GuideSupportPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Guide Support</h1>
             <p className="text-xl text-muted-foreground">
-              We're here to help you succeed as a Voyago guide
+              We're here to help you succeed as a TourGuide guide
             </p>
           </div>
 
@@ -100,7 +100,7 @@ export default function GuideSupportPage() {
               </CardHeader>
               <CardContent>
                 <Button className="w-full" variant="outline" asChild>
-                  <a href="mailto:guides@voyago.com">guides@voyago.com</a>
+                  <a href="mailto:guides@TourGuide.com">guides@TourGuide.com</a>
                 </Button>
               </CardContent>
             </Card>

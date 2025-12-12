@@ -100,7 +100,7 @@ export default function GuideResourcesPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Guide Resources</h1>
             <p className="text-xl text-muted-foreground">
-              Everything you need to succeed as a Voyago guide
+              Everything you need to succeed as a TourGuide guide
             </p>
           </div>
 
@@ -134,7 +134,7 @@ export default function GuideResourcesPage() {
                   Best Practices for Guides
                 </CardTitle>
                 <CardDescription>
-                  Follow these guidelines to maximize your success on Voyago
+                  Follow these guidelines to maximize your success on TourGuide
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -253,7 +253,7 @@ export default function GuideResourcesPage() {
                     <Link href="/guide/support">Contact Support</Link>
                   </Button>
                   <Button variant="outline" className="flex-1" asChild>
-                    <a href="mailto:guides@voyago.com">Email Us</a>
+                    <a href="mailto:guides@TourGuide.com">Email Us</a>
                   </Button>
                 </div>
               </CardContent>

@@ -1,7 +1,7 @@
 "use client";
 
-const ACCESS_TOKEN_KEY = "voyago_access_token";
-const REFRESH_TOKEN_KEY = "voyago_refresh_token";
+const ACCESS_TOKEN_KEY = "TourGuide_access_token";
+const REFRESH_TOKEN_KEY = "TourGuide_refresh_token";
 
 type Tokens = {
   accessToken: string;

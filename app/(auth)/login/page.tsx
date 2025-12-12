@@ -11,7 +11,7 @@ export default function LoginPage() {
       imageAlt="Beautiful destination"
       title="Welcome back"
       subtitle="Sign in to your account to continue exploring amazing destinations."
-      imageTitle="Welcome back to Voyago"
+      imageTitle="Welcome back to TourGuide"
       imageDescription="Continue your journey of discovery with authentic local experiences and unforgettable adventures around the world."
       footer={
         <>
