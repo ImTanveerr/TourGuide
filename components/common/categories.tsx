@@ -6,11 +6,11 @@ import Link from "next/link";
 import { Utensils, Landmark, Camera, Mountain, ShoppingBag } from "lucide-react";
 
 const categories = [
-  { id: 1, name: "Food & Drink", icon: Utensils, slug: "food" },
-  { id: 2, name: "History & Culture", icon: Landmark, slug: "history" },
-  { id: 3, name: "Photography", icon: Camera, slug: "photography" },
-  { id: 4, name: "Nature & Adventure", icon: Mountain, slug: "nature" },
-  { id: 5, name: "Shopping", icon: ShoppingBag, slug: "shopping" },
+  { id: 1, name: "Food & Drink", icon: Utensils, slug: "FOOD" },
+  { id: 2, name: "History & Culture", icon: Landmark, slug: "HISTORY" },
+  { id: 3, name: "Photography", icon: Camera, slug: "PHOTOGRAPHY" },
+  { id: 4, name: "Nature & Adventure", icon: Mountain, slug: "ADVENTURE" },
+  { id: 5, name: "Shopping", icon: ShoppingBag, slug: "SHOPPING" },
 ];
 
 export function Categories() {

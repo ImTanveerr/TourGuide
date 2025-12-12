@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { ShieldCheck, UserCheck, CreditCard, RefreshCw } from "lucide-react";
+import { ShieldCheck, UserCheck, CreditCard, RefreshCw, Map } from "lucide-react";
 
 const features = [
   {
-    icon: Map, // Changed to Map to represent 'Authentic' better
+    icon: Map, 
     title: "Authentic",
     description: "Escape the tourist traps. Our guides take you to the hidden gems only locals know."
   },
@@ -26,12 +26,10 @@ const features = [
   }
 ];
 
-// Helper to fix the icon reference above since I can't import Map inside the array definition easily in some setups
-import { Map } from "lucide-react";
-
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-secondary/20">
+    // UPDATED: 'bg-primary/5' gives a very light, branded blue tint to separate the section
+    <section className="py-24 bg-primary/5">
       <div className="container mx-auto px-4">
         
         {/* Header */}
@@ -49,8 +47,8 @@ export function WhyChooseUs() {
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-start md:items-center md:text-center group">
               
-              {/* Icon Container */}
-              <div className="mb-6 p-4 rounded-2xl bg-white dark:bg-card shadow-sm border border-border/50 group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
+              {/* Icon Container - Updated to match the light blue theme */}
+              <div className="mb-6 p-4 rounded-2xl bg-white shadow-sm border border-primary/10 group-hover:shadow-md group-hover:scale-110 transition-all duration-300">
                 <feature.icon 
                   className="w-8 h-8 text-primary" 
                   strokeWidth={1.5}
