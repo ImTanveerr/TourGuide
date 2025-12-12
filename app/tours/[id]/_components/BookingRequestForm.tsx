@@ -32,7 +32,7 @@ interface BookingRequestFormProps {
 
 export function BookingRequestForm({ listing }: BookingRequestFormProps) {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<CreateBookingFormData>({
@@ -62,9 +62,20 @@ export function BookingRequestForm({ listing }: BookingRequestFormProps) {
 
     try {
       setIsSubmitting(true);
+      // Convert datetime-local format (YYYY-MM-DDTHH:mm) to ISO string
+      // The datetime-local input gives us local time, so we need to create a Date object
+      // and convert it to ISO string for the API
+      const dateValue = data.date;
+      const date = new Date(dateValue);
+
+      if (isNaN(date.getTime())) {
+        toast.error("Invalid date format");
+        return;
+      }
+
       await bookingApi.createBooking({
         ...data,
-        date: new Date(data.date).toISOString(),
+        date: date.toISOString(),
       });
       toast.success("Booking request sent! The guide will review it shortly.");
       router.push("/dashboard/tourist/bookings");
@@ -77,6 +88,25 @@ export function BookingRequestForm({ listing }: BookingRequestFormProps) {
     }
   };
 
+  // Show loading state while checking authentication
+  if (isLoading) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>Book This Tour</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center justify-center py-8">
+            <div className="animate-pulse text-muted-foreground">
+              Loading...
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  // Show login prompt only if not loading and user is not authenticated
   if (!user) {
     return (
       <Card>
@@ -138,27 +168,8 @@ export function BookingRequestForm({ listing }: BookingRequestFormProps) {
                   <FormControl>
                     <Input
                       type="datetime-local"
-                      // Set min date to today
                       min={new Date().toISOString().slice(0, 16)}
-
-                      // Connect Ref and Blur for validation
-                      name={field.name}
-                      onBlur={field.onBlur}
-                      ref={field.ref}
-
-                      // FIX 1: Convert Form State (ISO String) -> Input Format (No seconds)
-                      value={
-                        field.value
-                          ? new Date(field.value).toISOString().slice(0, 16)
-                          : ""
-                      }
-
-                      // FIX 2: Convert Input Format -> Form State (ISO String with seconds)
-                      onChange={(e) => {
-                        const dateString = e.target.value;
-                        // Zod .datetime() requires full ISO string (with seconds and Z)
-                        field.onChange(dateString ? new Date(dateString).toISOString() : "");
-                      }}
+                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
